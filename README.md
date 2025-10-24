@@ -8,7 +8,7 @@ Welcome to my **DevOps Portfolio**, a collection of hands-on projects demonstrat
 
 | # | Project | Description | AWS Services / Tools |
 |---|----------------|-------------|----------------------|
-| 1 | [Set Up a Web App in the Cloud](projects/01-web-app-in-cloud) | Launch a simple web application in AWS using EC2 and S3 | EC2, S3 |
+| 1 | [Set Up a Web App in the Cloud](projects/01-web-app-in-cloud) | Launch a simple web application in AWS using EC2 and S3 | EC2, S3, Java, Maven, VS Code, SSH, Key-Pair |
 | 2 | [Connect a GitHub Repo with AWS](projects/02-github-to-aws-connection) | Configure GitHub and AWS integration using IAM and CodePipeline | IAM, CodePipeline |
 | 3 | [Secure Packages with CodeArtifact](projects/03-secure-packages-codeartifact) | Use AWS CodeArtifact to store and manage private packages | CodeArtifact |
 | 4 | [Continuous Integration with CodeBuild](projects/04-continuous-integration-codebuild) | Automate builds and tests using AWS CodeBuild | CodeBuild |
