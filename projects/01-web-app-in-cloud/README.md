@@ -95,7 +95,7 @@ User: ec2-user
 
 **Edited `index.jsp` to update the placeholder name.**
 
-![Index.jsp Screenshot](images/L-1-Index.png)
+![Index.jsp Screenshot](images/L-1-Index.jsp.png)
 
 ---
 
@@ -107,4 +107,5 @@ User: ec2-user
 * Time spent: ~1 hour
 
 ```
+
 
