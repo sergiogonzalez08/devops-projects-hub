@@ -1,24 +1,4 @@
-# Git & GitHub: Connecting and Updating My Web App
-
-This project demonstrates **setting up Git and GitHub**, connecting my previous Web App to GitHub, making changes, and pushing updates.
-
----
-
-## Key Tools and Concepts
-
-Services and tools used:
-
-- **Git** – version control system to track changes.  
-- **GitHub** – cloud repository to store and collaborate on code.  
-- **VS Code** – code editor for editing files on EC2 via Remote-SSH.  
-- **Bash & SSH** – terminal commands to manage EC2 and Git.
-
-Key concepts learned:
-
-- Installing Git locally on an EC2 instance.  
-- Initializing a local Git repository.  
-- Pushing commits to GitHub and viewing results live.  
-- Authenticating using GitHub tokens.
+This project demonstrates setting up **Git & GitHub** and connecting my previous Web App into a Git repository.
 
 ---
 
@@ -29,57 +9,33 @@ Key concepts learned:
 <tr>
 <td>
 
-### 1. Install Git on EC2
-- Updated system packages:
-```bash
-sudo dnf update -y
+### 1. Installing Git on EC2
+- SSH into the **EC2 instance**.  
+- Updated packages and installed **Git**:  
+  ```bash
+  sudo dnf update -y
+  sudo dnf install git -y
 ````
 
-* Installed Git:
+* Configured Git **user name** and **email**:
 
-```bash
-sudo dnf install git -y
-```
-
-### 2. Initialize Local Repository
-
-* Navigated to project root on EC2.
-* Ran:
-
-```bash
-git init
-```
-
-* Learned about branches: a branch is a "parallel version" of your project.
+  ```bash
+  git config --global user.name "Your Name"
+  git config --global user.email "you@example.com"
+  ```
 
 </td>
 <td>
 
-### 3. Connect to GitHub
+### 2. Setting Up GitHub
 
-* Added remote repository:
+* Created a **GitHub repository** for the Web App project.
+* Generated a **Personal Access Token** to authenticate securely.
+* Connected local repository to GitHub:
 
-```bash
-git remote add origin <GITHUB_REPO_URL>
-```
-
-* Added files to staging area:
-
-```bash
-git add .
-```
-
-* Committed changes:
-
-```bash
-git commit -m "Initial commit: connect Web App to GitHub"
-```
-
-* Pushed to GitHub:
-
-```bash
-git push -u origin master
-```
+  ```bash
+  git remote add origin https://github.com/yourusername/your-repo.git
+  ```
 
 </td>
 </tr>
@@ -87,42 +43,82 @@ git push -u origin master
 
 ---
 
-### 4. Authentication
+### 1. Terminal Commands
 
-* Git requires your **name and email** to track commits.
-* GitHub no longer accepts passwords; use a **personal access token**.
-* Created a token under GitHub **Developer Settings**.
-* Configured token on EC2 to authenticate securely.
+**Navigate to the project directory:**
+
+```bash
+cd ~/nextwork-web-project
+```
+
+**Initialize Git repository:**
+
+```bash
+git init
+```
+
+![Terminal Screenshot](images/L-2-Terminal.png)
 
 ---
 
-### 5. Making Changes
+### 2. Commit & Push Changes
 
-* Edited `.jsp` files in VS Code using Remote-SSH.
-* Added, committed, and pushed updates:
+**Stage files for commit:**
 
 ```bash
 git add .
+```
+
+**Commit changes with a message:**
+
+```bash
+git commit -m "Initial commit of Web App to GitHub"
+```
+
+**Push to GitHub repository:**
+
+```bash
+git push -u origin master
+```
+
+> Using `-u` sets the upstream for future pushes.
+
+![Git Commit Screenshot](images/L-2-Git_Commit.png)
+
+---
+
+### 3. Authentication & Tokens
+
+* GitHub now requires **Personal Access Tokens** instead of passwords.
+* Generated a token under **GitHub → Developer settings → Personal Access Tokens**.
+* Used the token for authentication when pushing from EC2.
+
+![GitHub Token Screenshot](images/L-2-GitHub_Token.png)
+
+---
+
+### 4. Making Further Changes
+
+* Edited `index.jsp` in VS Code via Remote SSH.
+* Staged, committed, and pushed changes again:
+
+```bash
+git add index.jsp
 git commit -m "Updated index.jsp with new content"
 git push
 ```
 
-* Verified changes in GitHub repository.
+* Verified the updates appear on GitHub.
+
+![VS Code Git Screenshot](images/L-2-VS_Code_Git.png)
 
 ---
 
-### Project Reflection
+### 5. Project Reflection
 
-* Time spent: ~52 minutes
-* Most challenging: slow EC2 free tier performance
-* Most rewarding: seeing changes live on GitHub
-* Motivation: sharpen skills with Bash, Git, and SSH
+* Practiced **Bash, SSH, Git, and GitHub workflow**.
+* Free-tier EC2 slowness was challenging.
+* Most rewarding: seeing commits appear on GitHub quickly.
+* Time spent: ~52 minutes.
 
-### Screenshots (Placeholders)
-
-![Screenshot 1: Install Git](images/git-install.png)
-![Screenshot 2: Initialize Repository](images/git-init.png)
-![Screenshot 3: Push to GitHub](images/git-push.png)
-![Screenshot 4: Edit JSP](images/edit-jsp.png)
-
-```
+---
