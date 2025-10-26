@@ -12,17 +12,17 @@ This project demonstrates setting up **Git & GitHub** and connecting my previous
 ### 1. Installing Git on EC2
 - SSH into the **EC2 instance**.  
 - Updated packages and installed **Git**:  
-  ```bash
-  sudo dnf update -y
-  sudo dnf install git -y
+```bash
+sudo dnf update -y
+sudo dnf install git -y
 ````
 
 * Configured Git **user name** and **email**:
 
-  ```bash
-  git config --global user.name "Your Name"
-  git config --global user.email "you@example.com"
-  ```
+```bash
+git config --global user.name "Your Name"
+git config --global user.email "you@example.com"
+```
 
 </td>
 <td>
@@ -30,12 +30,12 @@ This project demonstrates setting up **Git & GitHub** and connecting my previous
 ### 2. Setting Up GitHub
 
 * Created a **GitHub repository** for the Web App project.
-* Generated a **Personal Access Token** to authenticate securely.
-* Connected local repository to GitHub:
+* Generated a **Personal Access Token** for secure authentication.
+* Connected the local repository to GitHub:
 
-  ```bash
-  git remote add origin https://github.com/yourusername/your-repo.git
-  ```
+```bash
+git remote add origin https://github.com/yourusername/your-repo.git
+```
 
 </td>
 </tr>
@@ -57,7 +57,7 @@ cd ~/nextwork-web-project
 git init
 ```
 
-![Terminal Screenshot](images/L-2-Terminal.png)
+![Terminal Screenshot](images/L2%20-%20Git.png)
 
 ---
 
@@ -83,7 +83,7 @@ git push -u origin master
 
 > Using `-u` sets the upstream for future pushes.
 
-![Git Commit Screenshot](images/L-2-Git_Commit.png)
+![Git Commit Screenshot](images/L2%20-%20Bad%20Auth.png)
 
 ---
 
@@ -91,9 +91,9 @@ git push -u origin master
 
 * GitHub now requires **Personal Access Tokens** instead of passwords.
 * Generated a token under **GitHub → Developer settings → Personal Access Tokens**.
-* Used the token for authentication when pushing from EC2.
+* Used the token when pushing from EC2.
 
-![GitHub Token Screenshot](images/L-2-GitHub_Token.png)
+![Personal Access Token Screenshot](images/L2%20-%20Personal%20Access%20Token.png)
 
 ---
 
@@ -110,7 +110,7 @@ git push
 
 * Verified the updates appear on GitHub.
 
-![VS Code Git Screenshot](images/L-2-VS_Code_Git.png)
+![VS Code Git Screenshot](images/L2%20-%20Repo.png)
 
 ---
 
@@ -121,4 +121,4 @@ git push
 * Most rewarding: seeing commits appear on GitHub quickly.
 * Time spent: ~52 minutes.
 
----
+```
