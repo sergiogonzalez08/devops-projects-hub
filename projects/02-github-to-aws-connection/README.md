@@ -110,7 +110,7 @@ git push
 
 * Verified the updates appear on GitHub.
 
-![VS Code Git Screenshot](images/L2%20-%20Repo.png)
+![VS Code Git Screenshot](images/L2%20-%20Index.jsp.png)
 
 ---
 
@@ -122,3 +122,4 @@ git push
 * Time spent: ~52 minutes.
 
 ```
+
