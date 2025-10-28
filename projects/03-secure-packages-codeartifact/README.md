@@ -28,16 +28,7 @@ This project demonstrates setting up a **CodeArtifact repository on AWS** as par
 
 ---
 
-### 1. Project Reflection
-
-- This project took me approximately 52 minutes.  
-- The most challenging part was getting the AWS Artifact to connect.  
-- Most rewarding part: seeing it update in real-time.  
-- Part three of a DevOps CI/CD series; next project will continue the pipeline.
-
----
-
-### 2. CodeArtifact Repository
+### 1. CodeArtifact Repository
 
 - CodeArtifact is a secure, central place to store all software packages.  
 - Engineering teams use artifact repositories because they are secure, reliable, and give full control.  
@@ -48,7 +39,7 @@ This project demonstrates setting up a **CodeArtifact repository on AWS** as par
 
 ---
 
-### 3. CodeArtifact Security
+### 2. CodeArtifact Security
 
 **Issue:**  
 - To access CodeArtifact, EC2/Maven must be linked with AWS.  
@@ -60,7 +51,7 @@ This project demonstrates setting up a **CodeArtifact repository on AWS** as par
 
 ---
 
-### 4. IAM JSON Policy
+### 3. IAM JSON Policy
 
 - JSON policy attached to the IAM role:  
   - Permissions to **get auth tokens**, **find repo locations**, and **read packages**.  
@@ -87,7 +78,7 @@ This project demonstrates setting up a **CodeArtifact repository on AWS** as par
 
 ---
 
-### 5. Maven and CodeArtifact
+### 4. Maven and CodeArtifact
 
 * Compiled web app using **settings.xml**.
 * `settings.xml` configures Maven to authenticate to the correct Artifact repo.
@@ -97,14 +88,14 @@ This project demonstrates setting up a **CodeArtifact repository on AWS** as par
 
 ---
 
-### 6. Verify Connection
+### 5. Verify Connection
 
 * Checked `dev-project` Artifact repository after compiling.
 * Verified all packages were pushed successfully.
 
 ![Verify Connection Screenshot](images/L3-CodeArtifactPush.png)
 
-### 7. Project Reflection
+### 6. Project Reflection
 
 Practiced Bash, IAM Policies, CodeArtifact Deployment, Git, and GitHub workflow.
 
@@ -115,3 +106,4 @@ Most rewarding: see CodeArtifact sync on the push.
 Time spent: ~50 minutes.
 
 ```
+
